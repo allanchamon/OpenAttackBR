@@ -1,0 +1,30 @@
+ c:; cd 'c:\Users\allan.figueiredo\OpenAttack'; & 'c:\Python39\python.exe' 'c:\Users\allan.figueiredo\.vscode\extensions\ms-python.debugpy-2024.10.0-win32-x64\bundled\libs\debugpy\adapter/../..\debugpy\launcher' '62797' '--' 'c:\Users\allan.figueiredo\OpenAttack\examples\workflow.py' 
+c:\Python39\lib\site-packages\transformers-4.44.2-py3.9.egg\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Using the latest cached version of the module from C:\Users\allan.figueiredo\.cache\huggingface\modules\datasets_modules\datasets\sst\b8a7889ef01c5d3ae8c379b84cc4080f8aad3ac2bc538701cbe0ac6416fb76ff (last modified on Thu Sep  5 15:15:24 2024) since it couldn't be found locally at sst, or remotely on the Hugging Face Hub.
+c:\Python39\lib\site-packages\nltk-3.9.1-py3.9.egg\nltk\corpus\reader\wordnet.py:1181: UserWarning: The multilingual functions are not available with this Wordnet version
+  warnings.warn(
+c:\Python39\lib\site-packages\nltk-3.9.1-py3.9.egg\nltk\app\__init__.py:45: UserWarning: nltk.app.wordfreq not loaded (requires the matplotlib library).
+  warnings.warn("nltk.app.wordfreq not loaded (requires the matplotlib library).")
+Traceback (most recent call last):
+  File "c:\Users\allan.figueiredo\OpenAttack\examples\workflow.py", line 34, in <module>
+    main()
+  File "c:\Users\allan.figueiredo\OpenAttack\examples\workflow.py", line 24, in main
+    attacker = OpenAttack.attackers.PWWSAttacker()
+  File "c:\Python39\lib\site-packages\openattack-test-py3.9.egg\OpenAttack\attackers\pwws\__init__.py", line 60, in __init__
+    tokenizer = get_default_tokenizer(self.__lang_tag)
+  File "c:\Python39\lib\site-packages\openattack-test-py3.9.egg\OpenAttack\text_process\tokenizer\__init__.py", line 9, in get_default_tokenizer
+    return PunctTokenizer()
+  File "c:\Python39\lib\site-packages\openattack-test-py3.9.egg\OpenAttack\text_process\tokenizer\punct_tokenizer.py", line 25, in __init__
+    self.sent_tokenizer = DataManager.load("TProcess.NLTKSentTokenizer")
+  File "c:\Python39\lib\site-packages\openattack-test-py3.9.egg\OpenAttack\data_manager.py", line 93, in load
+    cls.data_reference[data_name] = cls.data_loader[data_name](
+  File "c:\Python39\lib\site-packages\openattack-test-py3.9.egg\OpenAttack\data\nltk_senttokenizer.py", line 17, in LOAD
+    return __import__("nltk").data.load("file:" + os.path.join(path, "english.pickle")).tokenize
+  File "c:\Python39\lib\site-packages\nltk-3.9.1-py3.9.egg\nltk\data.py", line 841, in load
+    resource_val = restricted_pickle_load(opened_resource.read())
+  File "c:\Python39\lib\site-packages\nltk-3.9.1-py3.9.egg\nltk\data.py", line 664, in restricted_pickle_load
+    return RestrictedUnpickler(BytesIO(string)).load()
+  File "c:\Python39\lib\site-packages\nltk-3.9.1-py3.9.egg\nltk\app\wordnet_app.py", line 664, in find_class
+    raise pickle.UnpicklingError(f"global '{module}.{name}' is forbidden")
+_pickle.UnpicklingError: global 'copy_reg._reconstructor' is forbidden
